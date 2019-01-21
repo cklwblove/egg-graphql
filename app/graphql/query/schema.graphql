@@ -1,0 +1,33 @@
+type Query {
+  launch(
+  flight_number: Int!
+  ): Launch
+  launches: [Launch!]
+}
+
+# GraphiQL 查询示例
+
+#{
+#  launch(flight_number:2) {
+#    mission_name,
+#    launch_year,
+#    launch_date_local,
+#    launch_success,
+#    rocket{
+#      rocket_name,
+#      rocket_type
+#    }
+#  }
+#}
+
+#{
+#  launches{
+#    mission_name,
+#    launch_date_local,
+#    launch_success,
+#    rocket{
+#      rocket_name,
+#      rocket_type
+#    }
+#  }
+#}
